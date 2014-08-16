@@ -14,9 +14,9 @@ set shiftwidth=4
 "インクリメンタルサーチ
 set incsearch
 " バックアップファイルの場所
-set backupdir=$HOME/vimbackup
+set backupdir=$HOME/.vim/backup
 "スワップファイルの場所
-set directory=$HOME/vimbackup
+set directory=$HOME/.vim/backup
 " 補完ウィンドウの色
 highlight Pmenu guibg=#666666
 highlight PmenuSel guibg=#AA0000 guifg=#FFFFFF

@@ -11,8 +11,30 @@ cd conf
 
 git pull
 
-cp ~/conf/* ~
+# vimバックアップファイルの置き場
+if [ ! -e ~/.vim/backup ] 
+then
+    mkdir ~/.vim/backup
+fi
 
-cd ~
+# Neobundle
+if [ ! -e ~/.vim/bundle ] 
+then
+    mkdir ~/.vim/bundle
+    git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+    echo "setup Neobundle\n"
+fi
 
-rm README.md updataConfFile.sh
+# colorスキーマ
+if [ ! -e ~/.vim/colors ] 
+then
+    mkdir ~/.vim/colors
+    cp ~/conf/.vim/colors/hybrid.vim ~/.vim/colors/
+    echo "setup color schema\n"
+fi
+
+# 各種設定ファイルの配置
+cp ~/conf/.bashrc ~
+cp ~/conf/.vimrc ~
+cp ~/conf/.gvimrc ~
+echo 'finish'
