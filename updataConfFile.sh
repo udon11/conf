@@ -14,13 +14,13 @@ git pull
 # vimバックアップファイルの置き場
 if [ ! -e ~/.vim/backup ] 
 then
-    mkdir ~/.vim/backup
+    mkdir -p ~/.vim/backup
 fi
 
 # Neobundle
 if [ ! -e ~/.vim/bundle ] 
 then
-    mkdir ~/.vim/bundle
+    mkdir -p ~/.vim/bundle
     git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
     echo "setup Neobundle\n"
 fi
@@ -28,7 +28,7 @@ fi
 # colorスキーマ
 if [ ! -e ~/.vim/colors ] 
 then
-    mkdir ~/.vim/colors
+    mkdir -p ~/.vim/colors
     cp ~/conf/.vim/colors/hybrid.vim ~/.vim/colors/
     echo "setup color schema\n"
 fi
